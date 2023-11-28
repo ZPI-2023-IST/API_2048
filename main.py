@@ -26,10 +26,10 @@ async def make_move(sid, data):
     print(f"sender: {sid} tells translator to make move:")
     print(f"move_ml: {move_ml}")
 
-    # if move_ml is None:
-    #     runner.reset()
-    # else:
-    #     runner.translator.make_move(move_ml)
+    if move_ml is None:
+        runner.reset()
+    else:
+        runner.translator.make_move(move_ml)
 
     state = runner.translator.get_state()
     reward = runner.translator.get_reward()
