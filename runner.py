@@ -9,5 +9,4 @@ class Runner:
 
     def reset(self):
         print("Resetting game")
-        self.game = Game2048()
-        self.translator = Translator2048(self.game)
+        self.translator.start_game()
