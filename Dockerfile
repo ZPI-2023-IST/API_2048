@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Repos urls
-ARG GAME="git+https://github.com/ZPI-2023-IST/2048.git@fix"
+ARG GAME="git+https://github.com/ZPI-2023-IST/2048.git"
 ARG TRANSLATOR="git+https://github.com/ZPI-2023-IST/Translator_2048.git"
 
 # Install git
