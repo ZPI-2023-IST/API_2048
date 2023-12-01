@@ -22,10 +22,6 @@ async def make_move(sid, data):
     data = json.loads(data)
     move_ml = data.get("move")
 
-    print(data)
-    print(f"sender: {sid} tells translator to make move:")
-    print(f"move_ml: {move_ml}")
-
     if move_ml is None:
         runner.reset()
     else:
@@ -36,8 +32,6 @@ async def make_move(sid, data):
     moves = runner.translator.get_moves()
     board = runner.translator.get_board()
     board_raw = runner.game.get_board()
-
-    print(f"moves: {moves}")
 
     response_data = {
         "moves_vector": moves,
