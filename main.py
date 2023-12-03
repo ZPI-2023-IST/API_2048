@@ -41,6 +41,8 @@ async def make_move(sid, data):
         "board_raw": parse_board(board_raw)
     }
 
+    console.log(response_data)
+
     await sio.emit("get_response", json.dumps(response_data), room=sid)
 
 
