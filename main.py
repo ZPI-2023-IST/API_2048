@@ -12,7 +12,10 @@ sio.attach(app)
 
 
 def parse_board(board):
-    new_board = [[x.value for x in row] for row in board]
+    new_board = [
+        [x.value if x.value is not None else 0 for x in row]
+        for row in board
+    ]
 
     return new_board
 
