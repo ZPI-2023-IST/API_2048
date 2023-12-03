@@ -23,7 +23,6 @@ def parse_board(board):
 @sio.event
 async def make_move(sid, data):
     data = json.loads(data)
-    move_ml = data.get("move")
 
     if move_ml is None:
         runner.reset()
