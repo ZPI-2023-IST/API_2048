@@ -9,7 +9,7 @@ COPY . /app
 
 # Repos urls
 ARG GAME="git+https://github.com/ZPI-2023-IST/2048.git"
-ARG TRANSLATOR="git+https://github.com/ZPI-2023-IST/Translator_2048.git"
+ARG TRANSLATOR="git+https://github.com/ZPI-2023-IST/Translator_2048.git@state_fix"
 
 # Install git
 RUN apt-get update && \
